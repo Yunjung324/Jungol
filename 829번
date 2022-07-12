@@ -1,0 +1,14 @@
+#829
+sum = 0
+avg = 0
+num = 0
+while(True):
+    n = int(input())
+    if n<0 or n>100:
+        break
+    else:
+        num+=1
+        sum+=n
+        avg = sum/num
+print('sum :',sum)
+print('avg : %.1f'%avg)
