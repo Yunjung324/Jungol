@@ -1,0 +1,17 @@
+#jungol 826번
+my_dict = {'Korea':'Seoul', 'USA':'Washington', 'Japan':'Tokyo', 'China':'Beijing'}
+
+while(True):
+    print('1. Korea\n2. USA\n3. Japan\n4. China')
+    a = input('number? ')
+    if a == '1':
+        print(my_dict['Korea'])
+    elif a == '2':
+        print(my_dict['USA'])
+    elif a == '3':
+        print(my_dict['Japan'])
+    elif a == '4':
+        print(my_dict['China'])
+    else:
+        print('none')
+        break
