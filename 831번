@@ -1,0 +1,13 @@
+#831번
+while(True):
+    width = int(input("Width = "))
+    height = int(input("Height = "))
+
+    triangle_area = width*height*0.5
+    print('Triangle Area = %.1f' %triangle_area)
+
+    reply = input('Continue? ')
+    if reply == 'Y' or reply == 'y':
+        continue
+    else:
+        break
