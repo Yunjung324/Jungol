@@ -1,0 +1,15 @@
+#966
+def caculate(a,b,c):
+    a = int(a)
+    c = int(c)
+    if b == '+':
+        print(a, b, c, '=', a+c)
+    elif b == '-':
+        print(a, b, c, '=', a-c)
+    elif b == '*':
+        print(a, b, c, '=', a*c)
+    elif b == '/':
+        print(a, b, c, '=', a//c)
+
+a, b, c = input().split()
+caculate(a,b,c)
