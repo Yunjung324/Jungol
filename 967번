@@ -1,0 +1,13 @@
+#967번
+def function(a, b):
+    if a>b:
+        a = a // 2
+        b = b * 2
+        print(a,b)
+    else:
+        b = b // 2
+        a = a * 2
+        print(a, b)
+
+a, b = map(int, input().split())
+function(a, b)
