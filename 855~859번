@@ -1,0 +1,53 @@
+#855번
+a, b = map(int, input().split())
+sum = 0
+avg = 0
+cnt = 0
+if a<b:
+    for i in range(a,b+1):
+        if i%3 == 0 or i%5 == 0:
+            sum += i
+            cnt += 1
+            avg = sum/cnt
+    print('sum :',sum)
+    print('avg : %.1f' %avg)
+else:
+    for i in range(b,a+1):
+        if i%3 == 0 or i%5 == 0:
+            sum += i
+            cnt += 1
+            avg = sum/cnt
+    print('sum :',sum)
+    print('avg : %.1f' %avg)
+
+#856번
+n = int(input())
+for i in range(1, 11):
+    print(i*n, end = ' ')
+
+# #857번
+n, k = map(int, input().split())
+for i in range(1, n+1):
+    for j in range(1, k+1):
+        print(i*j , end= ' ')
+    print()
+
+#858번
+n = int(input())
+for i in range(1, n+1):
+    for j in range(1, n+1):
+        print('(%d, %d)' %(i, j), end =' ')
+    print()
+
+#859번
+a, b = map(int, input().split())
+if a<b:
+    for i in range(1, 10):
+        for j in range(a, b+1):
+            print('%d * %d = %2d' %(j, i, i*j), end = '   ')
+        print()
+else:
+    for i in range(1, 10):
+        for j in range(a, b-1, -1):
+            print('%d * %d = %2d' %(j, i, i*j), end = '   ')
+        print()
