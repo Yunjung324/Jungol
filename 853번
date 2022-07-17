@@ -1,0 +1,8 @@
+#853번
+number = list(map(int, input().split()))
+sum = 0
+avg = 0
+for i in range(len(number)):
+    sum += number[i]
+    avg = sum/len(number)
+print('%.2f'%avg)
