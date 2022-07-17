@@ -1,0 +1,20 @@
+#853번
+number = list(map(int, input().split()))
+sum = 0
+avg = 0
+for i in range(len(number)):
+    sum += number[i]
+    avg = sum/len(number)
+print('%.2f'%avg)
+
+#854번
+number = list(map(int, input().split()))
+even = 0
+odd = 0
+for i in range(len(number)):
+    if number[i] %2 == 0 :
+        even += 1
+    else:
+        odd += 1
+print('even :',even)
+print('odd :', odd)
