@@ -1,0 +1,39 @@
+#861번
+for i in range(ord('A'), ord('Z')+1):
+    print(chr(i), end = '')
+
+#862번
+a, b = input().split()
+if ord(a)<ord(b):
+    for i in range(ord(a), ord(b)+1):
+        print(chr(i), end = ' ')
+else:
+    for i in range(ord(a), ord(b)-1,-1):
+        print(chr(i), end = ' ')
+
+#863번
+n = int(input())
+for i in range(1,n+1):
+   for j in range(1, i+1):
+       print('*', end='')
+   print()
+
+#864번
+n = int(input())
+for i in range(n, 0, -1):
+    for j in range(1, i+1):
+        print('*', end='')
+    print()
+for i in range(1, n+1):
+    for j in range(1, i+1):
+        print('*', end='')
+    print()
+
+#865번
+n = int(input())
+for i in range(n, 0, -1):
+    for j in range(1, n-i+1):
+        print(" ", end = '')
+    for j in range(1,i+1):
+        print("*", end = '')
+    print()
