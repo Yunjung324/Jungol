@@ -1,0 +1,32 @@
+#866번
+n = int(input())
+for i in range(n, 0, -1):
+    for j in range(1, n-i+1):
+        print(" ", end = '')
+    for j in range(1, i*2):
+        print('*', end = '')
+    print()
+
+#866번 다른 코드 ->이 방법이 더 쉬우니 이 방법 생각해보기
+a = int(input())
+for i in range(a):
+    print('%s%s' %(' '*i, '*'*(2*(a-i)-1)))
+
+#867번
+n = int(input())
+a = ord('A')
+for i in range(n, 0, -1):
+    for j in range(1, i+1):
+        print('%c' % a, end='')
+        a += 1
+    print()
+
+#868
+n = int(input())
+for i in range(n):
+    for j in range(1,i+1):
+        print(i+j)
+
+#869번 -이거 답지 본거니까 다시 생각해보기
+for x in range(48, 91):
+    print(x, '-', chr(x))
