@@ -1,0 +1,15 @@
+#901번
+list = [85.6, 79.5, 83.1, 80.0, 78.2, 75.0]
+a, b = map(int, input().split())
+a, b = a-1, b-1
+sum = list[a] + list[b]
+print('%.1f' %sum)
+
+
+#902번
+list = []
+for i in range(1, 6):
+    a = input()
+    list.append(a)
+for i in range(5, 0, -1):
+    print(list[i-1])
