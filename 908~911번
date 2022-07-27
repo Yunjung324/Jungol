@@ -5,9 +5,12 @@ for i in n:
     print(i, end = ' ')
 
 #909번
-a = [list(input().split()) for _ in range(5)]
-a.sort(reverse = True)
-for i in a:
+list = []
+for i in range(5):
+    a = input()
+    list.append(a)
+list.sort(reverse = True)
+for i in list:
     print(i)
 
 #910번
