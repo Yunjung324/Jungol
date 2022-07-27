@@ -1,0 +1,35 @@
+#905번
+a = list(map(int, input().split()))
+min = 99999
+for i in range(10):
+    if a[i] < min:
+        min = a[i]
+print(min)
+
+#906번
+a = list(map(int, input().split()))
+max, min = -99999, 99999
+for i in range(10):
+    if a[i] < 100 and a[i] > max:
+        max = a[i]
+
+    if a[i] >= 100 and a[i] < min:
+        min = a[i]
+if max == -99999:
+    max = 100
+if min == 99999:
+    min = 100
+print(max, min)
+
+#907번
+n = list(map(int, input().split()))
+sum1 = 0
+sum2 = 0
+avg = 0
+for i in range(0, 10, 2):
+    sum1 += n[i]
+    avg = sum1/5
+for i in range(1, 10, 2):
+    sum2 += n[i]
+print('sum :', sum2)
+print('avg :', avg)
