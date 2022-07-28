@@ -1,0 +1,36 @@
+#883
+a, b, c = input().split()
+if a<b and a<c:
+    print(a)
+elif b<a and b<c:
+    print(b)
+elif c<a and c<b:
+    print(c)
+
+#884
+str = 'Pennsylvania'
+s = input().rstrip()
+if s in str:
+    print('True')
+else:
+    print('False')
+
+#885
+a = input().rstrip()
+b = input().rstrip()
+if b in a:
+    a = a.split(b)
+    for i in a:
+        print(i.lstrip(), end='\n')
+else:
+    print(a)
+
+#887
+str = input().rstrip()
+s = '(space)'
+if s in str:
+    str = str.split(s)
+    for i in str[::-1]:
+        print(i.lstrip(), end = '\n')
+else:
+    print(str[::-1])
