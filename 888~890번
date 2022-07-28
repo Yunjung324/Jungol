@@ -1,0 +1,17 @@
+#888
+s, x, y= input().split()
+for i in range(int(y)):
+    s = s[int(x):] + s[0:int(x)]
+    print(s)
+
+#889
+s = input().split()
+print(min(s))
+print(max(s))
+
+#890
+a, b, n = input().split()
+newa = a+b
+newb = newa[0:int(n)] + b[int(n):]
+print(newa)
+print(newb)
