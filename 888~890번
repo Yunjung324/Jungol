@@ -15,3 +15,29 @@ newa = a+b
 newb = newa[0:int(n)] + b[int(n):]
 print(newa)
 print(newb)
+
+#891
+while(True):
+    a = input().rstrip()
+    if a == 'END':
+        break
+    print(a[::-1])
+
+#892
+str = input()
+if str.isalpha():
+    if str == str.upper():
+        print('U')
+        print(str)
+    elif str == str.lower():
+        print('L')
+        print(str.upper())
+    else:
+        print('X')
+        print(str.upper())
+elif str.isnumeric():
+    print('D')
+    print(str)
+else:
+    print('X')
+    print(str.upper())
