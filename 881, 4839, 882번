@@ -1,0 +1,21 @@
+#881
+str = input()
+reverse_str = ''
+for i in str:
+    reverse_str = i + reverse_str
+print('%s' %reverse_str)
+
+#4839
+str = input()
+for i in range(len(str)):
+    str = str[len(str)-1]+str[0:len(str)-1]
+    print(str)
+
+#882
+a = input()
+b = input()
+c = input()
+if a < b and b < c:
+    print('YES')
+else:
+    print('NO')
