@@ -41,3 +41,10 @@ elif str.isnumeric():
 else:
     print('X')
     print(str.upper())
+
+#893
+a = input()
+b, c = input().split()
+print(a.count(b))
+a = a.replace(b, c)
+print(a)
