@@ -1,3 +1,7 @@
+#880
+str = input()
+print(','.join(str))
+
 #881
 str = input()
 reverse_str = ''
