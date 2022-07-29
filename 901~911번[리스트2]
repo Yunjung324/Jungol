@@ -1,0 +1,99 @@
+#901번
+list = [85.6, 79.5, 83.1, 80.0, 78.2, 75.0]
+a, b = map(int, input().split())
+a, b = a-1, b-1
+sum = list[a] + list[b]
+print('%.1f' %sum)
+
+
+#902번
+list = []
+for i in range(1, 6):
+    a = input()
+    list.append(a)
+for i in range(5, 0, -1):
+    print(list[i-1])
+
+#903번
+list = []
+for i in range(10):
+    a = input().rstrip()
+    list.append(a)
+n = input().rstrip()
+for i in list:
+    if i[-1] == n:
+        print(i)
+
+
+#905번
+a = list(map(int, input().split()))
+min = 99999
+for i in range(10):
+    if a[i] < min:
+        min = a[i]
+print(min)
+
+#906번
+a = list(map(int, input().split()))
+max, min = -99999, 99999
+for i in range(10):
+    if a[i] < 100 and a[i] > max:
+        max = a[i]
+
+    if a[i] >= 100 and a[i] < min:
+        min = a[i]
+if max == -99999:
+    max = 100
+if min == 99999:
+    min = 100
+print(max, min)
+
+#907번
+n = list(map(int, input().split()))
+sum1 = 0
+sum2 = 0
+avg = 0
+for i in range(0, 10, 2):
+    sum1 += n[i]
+    avg = sum1/5
+for i in range(1, 10, 2):
+    sum2 += n[i]
+print('sum :', sum2)
+print('avg :', avg)
+
+#908번
+n = list(map(int, input().split()))
+n.sort(reverse = True)
+for i in n:
+    print(i, end = ' ')
+
+#909번
+list = []
+for i in range(5):
+    a = input()
+    list.append(a)
+list.sort(reverse = True)
+for i in list:
+    print(i)
+
+#910번
+list = []
+while(True):
+    n = int(input())
+    if n == -1:
+        break
+    list.append(n)
+if len(list) < 3:
+    for i in range(len(list)):
+        print(list[i], end = ' ')
+else:
+    for i in range(len(list)-3, len(list)):
+        print(list[i], end = ' ')
+
+#911번
+weight = list(map(float, input().split()))
+sum = 0
+for i in range(6):
+    sum += weight[i]
+    avg = sum / 6
+print('%.1f' %avg)
