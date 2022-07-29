@@ -1,9 +1,0 @@
-#903번
-list = []
-for i in range(10):
-    a = input().rstrip()
-    list.append(a)
-n = input().rstrip()
-for i in list:
-    if i[-1] == n:
-        print(i)
