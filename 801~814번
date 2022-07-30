@@ -1,0 +1,143 @@
+#801
+a = int(input())
+if a<0:
+    print(a)
+    print('minus')
+else:
+    print(a)
+
+#802
+height = int(input())
+weight = int(input())
+obesity = weight + 100 - height
+if obesity > 0:
+    print(obesity)
+    print('Obesity')
+else:
+    print(obesity)
+
+#803
+age = int(input())
+if age>=20:
+    print('An adult.')
+else:
+    a_age = 20 - age
+    print(a_age,'years')
+
+#804
+weight = float(input())
+if weight <= 50.8:
+    print('Flyweight')
+elif weight <= 61.23:
+    print('Lightweight')
+elif weight <= 72.57:
+    print('Middleweight')
+elif weight <= 88.45:
+    print('Cruiserweight')
+else:
+    print('Heavyweight')
+
+#805
+a = float(input())
+b = float(input())
+if a >= 4.0 and b >= 4.0:
+    print('A')
+elif a >= 3.0 and b>= 3.0:
+    print('B')
+else:
+    print('C')
+
+#806
+s, age = input().split()
+age = int(age)
+if s == 'M' and age >= 20:
+    print('MAN')
+elif s == 'M' and age < 20:
+    print('BOY')
+elif s == 'F' and age >= 20:
+    print('WOMAN')
+elif s == 'F' and age < 20:
+    print('GIRL')
+
+#807
+alpha = input()
+if alpha == 'A':
+    print('Excellent')
+elif alpha == 'B':
+    print('Good')
+elif alpha == 'C':
+    print('Usually')
+elif alpha == 'D':
+    print('Effort')
+elif alpha == 'F':
+    print('Failure')
+else:
+    print('Mistake')
+
+#808
+score = float(input())
+if score >= 4.0:
+    print('scholarship')
+elif score >= 3.0:
+    print('next semester')
+elif score >= 2.0:
+    print('seasonal semester')
+else:
+    print('retake')
+
+# 809
+a, b, c = map(int, input().split())
+if a<=b and a<=c:
+    print(a)
+elif b<=c and b<=a:
+    print(b)
+elif c<=a and c<=b:
+    print(c)
+
+#810
+a, b = map(int, input().split())
+if a>=b:
+    print(a-b)
+else:
+    print(b-a)
+
+#811
+n = int(input())
+if n == 0:
+    print('zero')
+elif n>0:
+    print('plus')
+else:
+    print('minus')
+
+#812
+year = int(input())
+if year%400 == 0:
+    print('leap year')
+elif year%4 == 0 and year%100 != 0:
+    print('leap year')
+else:
+    print('common year')
+
+#813
+number = input('Number? ')
+if number == '1':
+    print('dog')
+elif number == '2':
+    print('cat')
+elif number == '3':
+    print('chick')
+else:
+    print("I don't know.")
+
+#814
+month = int(input())
+if month<1 or month>12:
+    print('잘못 입력하셨습니다.')
+else:
+    if month == 2:
+        print('28')
+    elif month == 4 or month == 6 or month == 9 or month == 11:
+        print('30')
+    else:
+        print('31')
