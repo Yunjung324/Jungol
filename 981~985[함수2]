@@ -1,0 +1,47 @@
+#981 - 함수2
+n = int(input())
+number = list(map(int, input().split()))
+def function(number):
+    number.sort(reverse = True)
+    for i in number:
+        print(i, end = ' ')
+function(number)
+
+#982
+month, day = map(int, input().split())
+list = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+def function(month, day):
+    if month >12 or month<=0 or list[month-1] < day or day<=0:
+        print('BAD!')
+    else:
+        print('OK!')
+function(month, day)
+
+#983
+a, b = map(int, input().split())
+c, d = map(float, input().split())
+def function():
+    if abs(a) < abs(b):
+        print(b)
+    else:
+        print(a)
+    if abs(c) < abs(d):
+        print(c)
+    else:
+        print(d)
+function()
+
+#984
+def function():
+    r = (area / 3.14)**(1/2)
+    print('%.2f' %r)
+area = int(input())
+function()
+
+#985
+import math
+numbers = list(map(float, input().split()))
+def function():
+    numbers.sort(reverse = True)
+    print(math.ceil(numbers[0]), math.floor(numbers[2]), int(round(numbers[1], 0)))
+function()
