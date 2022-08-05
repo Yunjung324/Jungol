@@ -1,0 +1,69 @@
+#968 - 함수1
+a, b = map(int, input().split())
+if a<b:
+    for i in range(a, b+1):
+        print('== %ddan ==' % i)
+        for j in range(1, 10):
+            print('%d * %d = %2d' %(i, j, i*j))
+else:
+    for i in range(b, a+1):
+        print('== %ddan ==' % i)
+        for j in range(1, 10):
+            print('%d * %d = %2d' %(i, j, i*j))
+
+#969
+def function():
+    print('@'*10)
+print('first')
+function()
+print('second')
+function()
+print('third')
+function()
+
+#970
+def function(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    print(sum)
+n = int(input())
+function(n)
+
+#971
+def function():
+    for i in range(1, n+1):
+        for j in range(1, n+1):
+            print(i*j, end = ' ')
+        print()
+n = int(input())
+function()
+
+
+#972
+def function(a, b):
+    if a>b:
+        print(a**2-b**2)
+    else:
+        print(b**2-a**2)
+a, b = map(int, input().split())
+function(a, b)
+
+#973
+score = [list(map(int, input().split()))for _ in range(3)]
+def function():
+    for i in range(3):
+        sum = 0
+        for j in range(3):
+            print(score[i][j], end = ' ')
+            sum += score[i][j]
+        print(sum)
+    total = 0
+    for i in range(3):
+        sum = 0
+        for j in range(3):
+            sum += score[j][i]
+        print(sum, end = ' ')
+        total += sum
+    print(total, end = ' ')
+function()
