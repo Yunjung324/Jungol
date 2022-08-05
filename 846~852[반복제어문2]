@@ -1,0 +1,59 @@
+#846
+three = 0
+five = 0
+number = list(map(int, input().split()))
+for i in range(0, len(number)):
+    if number[i]%3 == 0:
+        three += 1
+    if number[i]%5 == 0:
+        five += 1
+print('Multiples of 3 :', three)
+print('Multiples of 5 :', five)
+
+#847
+sum = 0
+avg = 0
+score = list(map(int, input().split()))
+for i in range(len(score)):
+    sum += score[i]
+avg = sum/len(score)
+if avg >= 80:
+    print('avg : %.1f' %avg)
+    print('pass')
+else:
+    print('avg : %.1f' % avg)
+    print('fail')
+
+#848
+for i in range(2, 7):
+    for j in range(i, i+5):
+        print(j, end =' ')
+    print()
+
+#849
+for i in range(2, 5):
+    for j in range(1, 6):
+        print('%d * %d = %2d   '%(i,j, i*j), end = '')
+    print()
+
+#850
+n = int(input())
+for i in range(n):
+    print('JUNGOL')
+
+#851
+n, k = map(int, input().split())
+if n < k:
+    for i in range(n,k+1):
+        print(i, end=' ')
+else:
+    for i in range(k,n+1):
+        print(i, end=' ')
+
+#852
+sum = 0
+n = int(input())
+for i in range(1, n+1):
+    if i % 5 == 0:
+        sum += i
+print(sum)
