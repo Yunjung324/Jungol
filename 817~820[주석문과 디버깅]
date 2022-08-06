@@ -1,0 +1,28 @@
+#주석문과 디버깅
+#817
+s_name, f_name = input().split()
+print(f_name, s_name)
+
+#818
+score = int(input("Score? "))
+if score >= 90:
+    print('Perfect')
+elif score >= 80:
+    print('Great')
+else:
+    print('Effort')
+
+#819
+a = 5
+a += 10
+a = a-1
+print('15')
+
+#820
+import time
+now = time.localtime()
+a = 0
+a = now.tm_year - 1900
+a += now.tm_mon -1
+a += now.tm_mday
+print('0', '122', '129
