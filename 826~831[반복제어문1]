@@ -1,0 +1,77 @@
+#jungol 826번
+my_dict = {'Korea':'Seoul', 'USA':'Washington', 'Japan':'Tokyo', 'China':'Beijing'}
+
+while(True):
+    print('1. Korea\n2. USA\n3. Japan\n4. China')
+    a = input('number? ')
+    if a == '1':
+        print(my_dict['Korea'])
+    elif a == '2':
+        print(my_dict['USA'])
+    elif a == '3':
+        print(my_dict['Japan'])
+    elif a == '4':
+        print(my_dict['China'])
+    else:
+        print('none')
+        break
+
+#827
+n = int(input())
+for i in range(1,n+1):
+    print(i,end=' ')
+    
+#828
+even = 0
+odd = 0
+while(True):
+    n = int(input())
+    if n == 0:
+        break
+    else:
+        if n%2 == 0:
+            even+=1
+        else:
+            odd+=1
+print('odd :',odd)
+print('even :',even)
+
+#829
+sum = 0
+avg = 0
+num = 0
+while(True):
+    n = int(input())
+    if n<0 or n>100:
+        break
+    else:
+        num+=1
+        sum+=n
+        avg = sum/num
+print('sum :',sum)
+print('avg : %.1f'%avg)
+
+#830
+list = []
+while(True):
+    n = int(input())
+    list.append(n)
+    if n == 0:
+        break
+    elif n%3 ==0 or n%5==0:
+        list.remove(n)
+print(len(list)-1)
+
+#831번
+while(True):
+    width = int(input("Width = "))
+    height = int(input("Height = "))
+
+    triangle_area = width*height*0.5
+    print('Triangle Area = %.1f' %triangle_area)
+
+    reply = input('Continue? ')
+    if reply == 'Y' or reply == 'y':
+        continue
+    else:
+        break
