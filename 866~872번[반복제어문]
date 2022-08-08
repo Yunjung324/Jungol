@@ -34,6 +34,28 @@ for i in range(n, 0, -1):
         a += 1
     print()
 
-#869번 -이거 답지 본거니까 다시 생각해보기
+#869번 -이거 다시 생각해보기
 for x in range(48, 91):
     print(x, '-', chr(x))
+    
+#870
+a = int(input())
+for x in range(ord('a')+a-1, ord('z')+1, a): print(chr(x), end = '')
+
+#871
+n = int(input())
+for i in range(0, n):
+    for j in range(i+1):
+        print('*', end = '')
+    print()
+for i in range(n-1, 0, -1):
+    for j in range(i):
+        print('*', end = '')
+    print()
+    
+#872
+n = int(input())
+for i in range(n):
+    print('%s%s' %(' '*i, '*'*(2*(n-i)-1)))
+for i in range(n-1, 0, -1):
+    print('%s%s' %(' '*(i-1), '*'*(2*(n-i)+1)))
