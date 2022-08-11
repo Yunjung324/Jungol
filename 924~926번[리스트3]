@@ -34,3 +34,22 @@ for k in list3:
 print()
 for i in list4:
     print(i, end = ' ')
+
+
+
+#931
+a = []
+number = list(map(int, input().split()))
+for i in range(len(number)):
+    for j in range(1, 7):
+        a.append(number.count(j))
+for i in range(1, 7):
+    print(i, ":", a[i-1])
+
+#931 또 다른 코드
+a = [0, 0, 0, 0, 0, 0]
+b = map(int, input().split())
+for x in b:
+    a[x] += 1
+for x in range(1, 7):
+    print("%d : %d" %(x, a[x]))
