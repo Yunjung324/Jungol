@@ -35,7 +35,32 @@ print()
 for i in list4:
     print(i, end = ' ')
 
+#927
+total_score = 0
+list2 = []
+cnt = 0
+score = [list(map(int, input().split())) for _ in range(5)]
+for i in range(5):
+    total_score = sum(score[i])
+    avg = total_score / 4
+    list2.append(avg)
+    if list2[i] >= 80:
+        print('pass')
+        cnt += 1
+    else:
+        print('fail')
+print('Successful :', cnt)
 
+#928
+list1 = [[0]*6 for _ in range(6)]
+list1[0][1] = 1
+for i in range(1, 6):
+    for j in range(1, 6):
+        list1[i][j] = list1[i][j-1] + list1[i-1][j]
+for i in range(1, 6):
+    for j in range(1, 6):
+        print('%d' %list1[i][j], end = ' ')
+    print()
 
 #931
 a = []
