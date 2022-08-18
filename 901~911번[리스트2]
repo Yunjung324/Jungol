@@ -97,3 +97,84 @@ for i in range(6):
     sum += weight[i]
     avg = sum / 6
 print('%.1f' %avg)
+
+#901
+list = [85.6, 79.5, 83.1, 80.0, 78.2, 75.0]
+a, b = map(int, input().split())
+a, b = a-1, b-1
+sum = list[a] + list[b]
+print('%.1f' %sum)
+
+#902 - 새로운 코드(단어 역순 출력하기)
+s = []
+for i in range(5):
+    a = input()
+    s.append(a)   #s.append(input())이라고 해도 됨
+for i in reversed(s):
+    print(i)
+
+#903
+s = []
+for i in range(10):
+    s.append(input())
+k = input()
+for i in range(10):
+    if k == s[i][-1]:
+        print(s[i])
+
+#905
+a = list(map(int, input().split()))
+print(min(a))
+
+#906
+s = []
+d = []
+a = list(map(int, input().split()))
+for i in range(10):
+    if a[i] < 100:
+        s.append(a[i])
+    if a[i] >= 100:
+        d.append(a[i])
+if len(s) == 0:
+    s.append(100)
+if len(d) == 0:
+    d.append(100)
+print(max(s), min(d))
+
+#906
+a = sorted([int(x) for x in input().split()])
+n = 0
+for x in a:
+    if x<100:
+        n += 1
+if n == 0:
+    print(100, a[0])
+elif n == len(a):
+    print(a[-1], 100)
+else:
+    print(a[n-1], a[n])
+
+#907번
+a = [int(x) for x in input().split()]
+print('sum :', sum(a[1::2]))
+print('avg : %.1f' %(sum(a[0::2])/len(a[0::2])))
+
+908
+print(*sorted([int(x) for x in input().split()], reverse = True))
+
+909
+print(*sorted([input() for x in range(5)], reverse = True), sep = '\n')
+
+#910
+a = []
+while True:
+    n = int(input())
+    if n == -1:
+        break
+    else:
+        a.append(n)
+print(*a[-3:len(a)])
+
+#911
+a = list(map(float, input().split()))
+print(round(sum(a)/len(a), 1))
