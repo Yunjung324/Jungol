@@ -45,3 +45,38 @@ def function():
     numbers.sort(reverse = True)
     print(math.ceil(numbers[0]), math.floor(numbers[2]), int(round(numbers[1], 0)))
 function()
+
+#986
+def bubbleSort_DESC(arr):
+    for i in range(len(arr)-1):
+        for j in range(0, len(arr)-1-i):
+            if arr[j+1] > arr[j]:
+                arr[j+1], arr[j] = arr[j], arr[j+1]
+        print(*arr)
+a = list(map(int, input().split()))
+bubbleSort_DESC(a)
+
+987
+def desc():
+    a.sort(reverse = True)
+    for i in a:
+        print(i, end = ' ')
+    print()
+n = int(input())
+a = list(map(int, input().split()))
+desc()
+
+#988
+n, k = map(float, input().split())
+def function(n,k):
+    n = int(n**(1/2))
+    k = int(k**(1/2))
+    cnt = 0
+    if n < k:
+        for i in range(n+1, k+1):
+            cnt += 1
+    else:
+        for i in range(k+1, n+1):
+            cnt += 1
+    print(cnt)
+function(n, k)
