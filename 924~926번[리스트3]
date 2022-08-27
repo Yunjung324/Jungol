@@ -78,6 +78,15 @@ for x in b:
     a[x] += 1
 for x in range(1, 7):
     print("%d : %d" %(x, a[x]))
+    
+#932
+a = [0 for _ in range(11)]
+for x in map(int, input().split()):  #값 받아오기
+    a[x//10] += 1   #받은 값을 10으로 나눈 몫의 개수 세기
+for x in range(len(a)-1, 0, -1):
+    if a[x] != 0: print(x*10, ':', a[x], 'person')
+if a[0] != 0: print('0 :', a[0], 'person')
+
 
 #933
 a, b = map(int, input().split())
@@ -100,3 +109,88 @@ for i in range(4):
     for j in range(3):
         b += a[i][j]
 print(b)
+
+#935
+score = [[0]*3 for _ in range(4)]
+for i in range(4):
+    score[i] = map(int, input('%dclass? ' %(i+1)).split())
+for i in range(4):
+    print('%dclass : %d' %((i+1), sum(score[i])))
+
+#936
+a = [[0]*5 for _ in range(5)]
+for i in range(5):
+    if i%2 == 0:
+        a[0][i] = 1
+for i in range(1, 5):
+    if i%2 == 0:
+        a[i][0] = a[i-1][1]
+        a[i][4] = a[i-1][3]
+        a[i][2] = a[i-1][1] + a[i-1][3]
+    else:
+        a[i][1] = a[i-1][0] + a[i-1][2]
+        a[i][3] = a[i-1][2] + a[i-1][4]
+for i in a:
+    for j in i:
+        print(j, end = ' ')
+    print()
+
+#937
+list1 = [[0]*3 for _ in range(2)]
+list2 = [[0]*3 for _ in range(2)]
+print('first array')
+for i in range(2):
+    list1[i] = list(map(int, input().split()))
+print('second array')
+for i in range(2):
+    list2[i] = list(map(int, input().split()))
+list3 = [[0]*3 for _ in range(2)]
+for i in range(2):
+    for j in range(3):
+        list3[i][j] = list1[i][j] * list2[i][j]
+for i in list3:
+    for j in i:
+        print(j, end = ' ')
+    print()
+
+#938  - 코드 너무 길어 다시 풀어보기
+import math
+a = [[0]*2 for _ in range(4)]
+b = []
+c = []
+length = 0
+width1 = 0
+width2 = 0
+total = 0
+for i in range(4):
+    a[i] = list(map(int, input().split()))
+for i in range(4):
+    length = (a[i][0] + a[i][1]) / 2
+    b.append(math.trunc(length))
+for i in range(4):
+    width1 += a[i][0]
+    width2 += a[i][1]
+avg_width = width1 /4
+avg_width2 = width2 / 4
+c.append(math.trunc(avg_width))
+c.append(math.trunc(avg_width2))
+for i in range(4):
+    for j in range(2):
+        total += a[i][j]
+        total_s = total / 8
+for i in b:
+    print(i, end = ' ')
+print()
+for j in c:
+    print(j, end = ' ')
+print()
+print(math.trunc(total_s))
+
+#939
+N = int(input())
+a = [[0]*N for _ in range(N)]
+for x in range(N):
+    for y in range(x+1):
+        if y == 0 or y == x: a[x][y] = 1 #가로줄의 양 끝 = 1
+        else: a[x][y] = a[x-1][y]+a[x-1][y-1]
+for r in reversed(a): print(*[x for x in r if x])
