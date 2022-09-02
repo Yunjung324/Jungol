@@ -1,0 +1,27 @@
+#401
+def function(n):
+    if n == 0:
+        return
+    else:
+        print('recursive')
+        function(n-1)
+n = int(input())
+function(n)
+
+#402
+def function(n):
+    if n == 0:
+        return
+    else:
+        print(n, end = ' ')
+        function(n-1)
+n = int(input())
+function(n)
+
+#403
+def function(n):
+    if n == 1:
+        return 1
+    return n + function(n-1)
+n = int(input())
+print(function(n))
