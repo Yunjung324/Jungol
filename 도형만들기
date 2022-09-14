@@ -1,0 +1,15 @@
+#1291 : 구구단
+while 1:
+    a, b = map(int, input().split())
+    if a<2 or a>9 or b<2 or b>9:
+        print('INPUT ERROR!')
+        continue
+    for i in range(1, 10):  #밖
+        if a>=b:
+            for x in range(a, b-1, -1):
+                print(x, "*", i, "=", str(x*i).rjust(2, " "), end = "   ")
+        else:
+            for x in range(a, b+1):
+                print(x, "*", i, "=", str(x*i).rjust(2, " "), end = "   ")
+        print("")
+    break
