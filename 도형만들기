@@ -13,3 +13,17 @@ while 1:
                 print(x, "*", i, "=", str(x*i).rjust(2, " "), end = "   ")
         print("")
     break
+
+#1856
+n, m = map(int, input().split())
+b = 1
+for i in range(0,n):
+    for j in range(0,m):
+        if i % 2 == 0:
+            s=j+1+ i*m
+            # print("i % 2 == 0   :::", "j+1+ i*m=>",j,'+',1,'+',i,'*',m,'s==>',s)
+        else:
+            s=m - j + i*m   #0--+)*0
+            # print("i % 2 == 1   :::", "m - j + i*m=>",m,'-',j,'+',i,'*',m,'s==>',s)
+        print(s,end=' ')
+    print()
