@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(){
+    int a = 30;
+    int b = 50;
+    char c = 'a'
+    int* p =&a;
+    
+    p= &b;
+    *p = 200;
+    
+    printf(" a = %d,  &a = %u \n", a, &a);
+    printf(" b = %d,  &b = %u \n", b, &b);
+    printf(" *p = %d,  p = %d, &p = %u \n", *p, p, &p);
+}
